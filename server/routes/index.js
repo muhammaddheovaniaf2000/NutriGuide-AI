@@ -15,7 +15,7 @@ const errorHandler = require('../middlewares/errorHandler')
 // PUBLIC SITE
 // router.get('/pub/recipes', RecipeController.publicRecipes)
 
-router.use('/users', userRoutes)
+router.use('/', userRoutes)
 
 //? HARUS MELAKUKAN LOGIN UNTUK MENGAKSES ENDPOINT DI BAWAH INI
 router.use(authentication)
