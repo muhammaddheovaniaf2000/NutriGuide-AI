@@ -1,7 +1,6 @@
 const { sign } = require('jsonwebtoken');
 const { comparePassword } = require('../helpers/bcrypt');
 const { User } = require('../models');
-const { use } = require('../routes');
 const { signToken } = require('../helpers/jwt');
 
 class UserController {
