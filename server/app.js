@@ -30,11 +30,11 @@ app.use(router);
 
 // 3. Kondisi Listen (Sangat Penting untuk Testing!)
 // Agar saat dijalankan oleh Jest/Supertest, app.listen tidak dipanggil lagi
-// if (process.env.NODE_ENV !== 'test') {
-//   app.listen(PORT, () => {
-//     console.log(`App running on http://localhost:${PORT}`);
-//     console.log(`API Docs available at http://localhost:${PORT}/api-docs`);
-//   });
-// }
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(PORT, () => {
+    console.log(`App running on http://localhost:${PORT}`);
+    console.log(`API Docs available at http://localhost:${PORT}/api-docs`);
+  });
+}
 
 module.exports = app;

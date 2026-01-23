@@ -110,3 +110,47 @@ class UserController {
   
 
 module.exports = UserController;
+
+// tolong bantu saya mengerjakan frontend menggunakan Vite + React.js (Implementasi Component, Router, State Management: Redux (Jangan menggunakan Thunk Async)),
+// Wajib Implementasi state management redux pada sisi clientInformation, pastikan fetching data melalui store dan mendistribusikannya ke component yang membutuhkan (Single source of truth), Wajib, membuat form login menggunakakn sosial media sign in (google), dan manfaatkan 3rd party API yang saya gunakan.
+
+// NutriGuide AI adalah asisten kesehatan digital berbasis web yang dirancang untuk memberikan solusi perencanaan makan personal (Meal Planning) bagi individu yang memiliki target berat badan spesifik, baik itu menurunkan berat badan (Lose Weight) maupun menaikkan berat badan (Gain Weight). Aplikasi ini mengintegrasikan data nutrisi akurat dengan kecerdasan buatan untuk memastikan setiap kalori yang dikonsumsi mendukung target kesehatan pengguna.
+
+// 2.⁠ ⁠Masalah yang Diselesaikan
+// Banyak orang gagal dalam diet karena tidak tahu berapa banyak kalori yang harus dikonsumsi dan bingung mencari resep yang sesuai dengan kebutuhan nutrisi tersebut. NutriGuide AI memotong kebingungan tersebut dengan memberikan rekomendasi instan dan jadwal makan yang terukur.
+
+// 3.⁠ ⁠Fitur Utama (Core Features)
+// AI Goal Consultant (Kriteria a.iii): Menggunakan Gemini AI untuk menganalisis profil fisik user (berat, tinggi, usia) dan menentukan strategi kalori harian yang optimal untuk mencapai target berat badan.
+
+// Calorie-Targeted Recipes: Integrasi dengan Spoonacular API untuk menyajikan resep yang sudah terfilter berdasarkan jumlah kalori, protein, dan lemak yang dibutuhkan.
+
+// Smart Meal Planner: Fitur penjadwalan makan (Sarapan, Siang, Malam) yang memastikan total asupan harian tidak melebihi atau kurang dari target yang ditentukan.
+
+// Visual Appetite (Unsplash Integration): Menampilkan visualisasi makanan yang berkualitas tinggi untuk meningkatkan motivasi user dalam menjalankan program dietnya.
+
+// Personal Recipe Vault (Favorites): Memungkinkan user menyimpan resep-resep diet yang paling mereka sukai untuk diakses kembali dengan cepat.
+
+// 4.⁠ ⁠Arsitektur Teknologi (Tech Stack)
+// Frontend: React JS (untuk antarmuka yang reaktif dan dinamis).
+
+// Backend: Node.js & Express JS (untuk manajemen logika API dan database).
+
+// Database: PostgreSQL/MySQL dengan Sequelize ORM (untuk menyimpan profil user, resep, dan jadwal makan secara terstruktur).
+
+// 3rd Party APIs:
+
+// Gemini AI: Otak di balik analisis strategi diet.
+
+// Spoonacular: Sumber data nutrisi dan resep masakan dunia.
+
+// Unsplash: Sumber aset gambar estetis untuk antarmuka pengguna.
+
+// 5.⁠ ⁠Alur Pengguna (User Journey)
+// Input Profile: User memasukkan data fisik dan memilih target (Naik/Turun berat badan).
+
+// Get Strategy: AI memberikan rekomendasi asupan kalori harian.
+
+// Explore & Plan: User mencari resep yang sesuai kalori dan memasukkannya ke jadwal (Meal Plan).
+
+// Track: User memantau jadwal makan mereka setiap hari melalui dashboard.
+

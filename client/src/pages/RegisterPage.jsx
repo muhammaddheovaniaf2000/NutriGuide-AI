@@ -1,107 +1,93 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import api from '../api'; 
+import { useNavigate, Link } from 'react-router';
+import { User, Mail, Lock, ShieldCheck } from 'lucide-react';
+import http from '../api/http';
 import Swal from 'sweetalert2';
 
-const RegisterPage = () => {
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+export default function RegisterPage() {
   const navigate = useNavigate();
+  const [form, setForm] = useState({ username: '', email: '', password: '' });
+
+  // URL Unsplash dengan tema 'healthy lifestyle' agar sesuai dengan NutriGuide
+  const backgroundUrl = "https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80";
 
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      // Kirim data ke backend
-      await api.post('/register', { username, email, password });
-      
+      await http.post('/register', form);
       Swal.fire({
         icon: 'success',
-        title: 'Account Created!',
-        text: 'You can now login with your new account.',
-        confirmButtonColor: '#16a34a'
+        title: 'Berhasil!',
+        text: 'Akun Anda telah dibuat. Silakan login.',
+        timer: 2000,
+        showConfirmButton: false
       });
       navigate('/login');
-    } catch (error) {
-      // PENTING: Ambil message dari response backend
-      // Jika dimasmail.com dikirim, backend akan balas { message: "Invalid email format" }
-      const serverMessage = error.response?.data?.message || 'Register failed';
-      
-      Swal.fire({
-        icon: 'error',
-        title: 'Validation Error',
-        text: serverMessage, // Ini yang akan menampilkan "Invalid email format"
-        confirmButtonColor: '#ef4444'
-      });
+    } catch (err) { 
+      Swal.fire('Error', err.response?.data?.message || 'Registrasi gagal', 'error'); 
     }
   };
 
   return (
-    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
-      {/* Latar Belakang */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1506368249639-73a05d6f6488?w=1200&auto=format&fit=crop&q=80')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          filter: 'blur(3px)',
-          transform: 'scale(1.05)'
-        }}
-      />
-      <div className="absolute inset-0 bg-black/45 z-10" />
+    <div 
+      className="min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat relative px-4"
+      style={{ backgroundImage: `url('${backgroundUrl}')` }}
+    >
+      {/* Overlay Gelap & Blur */}
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]"></div>
 
-      <div className="relative z-20 max-w-md w-full mx-4 bg-white/95 p-10 rounded-3xl shadow-2xl border border-white/20">
-        <div className="text-center mb-6">
-          <h2 className="text-4xl font-extrabold text-green-700 font-serif tracking-tight">Join Us</h2>
-          <p className="text-gray-600 mt-2 font-medium">Create your NutriGuide AI account</p>
+      <div className="max-w-md w-full bg-white/95 backdrop-blur-md rounded-[3rem] shadow-2xl p-10 relative z-10 border border-white/20">
+        <div className="text-center mb-10">
+          <div className="inline-flex p-3 bg-emerald-100 rounded-2xl mb-4 text-emerald-600">
+            <ShieldCheck size={28} />
+          </div>
+          <h2 className="text-3xl font-black text-gray-800 tracking-tight">Daftar Akun</h2>
+          <p className="text-gray-500 mt-2 text-sm">Mulai perjalanan sehatmu hari ini</p>
         </div>
 
-        {/* noValidate WAJIB ADA agar browser tidak sok tahu memvalidasi email */}
-        <form onSubmit={handleRegister} className="space-y-4" noValidate>
-          <div className="space-y-1">
-            <label className="text-sm font-semibold text-gray-700 ml-1">Username</label>
-            <input
-              type="text"
-              placeholder="Your username"
-              className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-500 outline-none bg-gray-50"
-              onChange={(e) => setUsername(e.target.value)}
+        <form onSubmit={handleRegister} className="space-y-4">
+          <div className="relative">
+            <User className="absolute left-4 top-4 text-gray-400" size={18} />
+            <input 
+              type="text" 
+              placeholder="Username" 
+              required
+              className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-100 rounded-2xl outline-none focus:ring-2 focus:ring-emerald-500 transition-all" 
+              onChange={e => setForm({...form, username: e.target.value})} 
             />
           </div>
 
-          <div className="space-y-1">
-            <label className="text-sm font-semibold text-gray-700 ml-1">Email Address</label>
-            <input
-              type="text" // UBAH KE TEXT agar dimasmail.com bisa lolos ke backend
-              placeholder="your@email.com"
-              className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-500 outline-none bg-gray-50"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          
-          <div className="space-y-1">
-            <label className="text-sm font-semibold text-gray-700 ml-1">Password</label>
-            <input
-              type="password"
-              placeholder="Min. 8 characters"
-              className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-500 outline-none bg-gray-50"
-              onChange={(e) => setPassword(e.target.value)}
+          <div className="relative">
+            <Mail className="absolute left-4 top-4 text-gray-400" size={18} />
+            <input 
+              type="email" 
+              placeholder="Alamat Email" 
+              required
+              className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-100 rounded-2xl outline-none focus:ring-2 focus:ring-emerald-500 transition-all" 
+              onChange={e => setForm({...form, email: e.target.value})} 
             />
           </div>
 
-          <button type="submit" className="w-full bg-green-600 hover:bg-green-700 text-white py-3.5 rounded-xl font-bold text-lg shadow-lg transition-all active:scale-[0.98] mt-2">
-            Create Account
+          <div className="relative">
+            <Lock className="absolute left-4 top-4 text-gray-400" size={18} />
+            <input 
+              type="password" 
+              placeholder="Kata Sandi" 
+              required
+              className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-100 rounded-2xl outline-none focus:ring-2 focus:ring-emerald-500 transition-all" 
+              onChange={e => setForm({...form, password: e.target.value})} 
+            />
+          </div>
+
+          <button className="w-full py-4 mt-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-2xl shadow-lg shadow-emerald-200 transition-all flex items-center justify-center gap-2">
+            Buat Akun Sekarang
           </button>
         </form>
 
-        <div className="mt-6 pt-6 border-t border-gray-100 text-center">
-          <p className="text-sm text-gray-600">
-            Already have an account? <Link to="/login" className="text-green-700 font-bold hover:underline">Log in here</Link>
-          </p>
-        </div>
+        <p className="text-center text-sm text-gray-500 mt-8">
+          Sudah punya akun? <Link to="/login" className="text-emerald-600 font-bold hover:underline">Masuk di sini</Link>
+        </p>
       </div>
     </div>
   );
-};
-
-export default RegisterPage;
+}

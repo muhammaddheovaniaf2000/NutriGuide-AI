@@ -13,7 +13,7 @@ const http = require('http');
 /**
  * Get port from environment and store in Express.
  */
-const port = 80
+const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**
@@ -91,3 +91,5 @@ function onListening() {
   console.log(`   Health Check: http://localhost:${addr.port}/health`);
   console.log('===========================================');
 }
+
+
