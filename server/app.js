@@ -10,7 +10,7 @@ const router = require('./routes');
 
 app.use(cors());
 
-// Middleware Body-Parser
+// MIDDLEWARES Body-Parser
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
