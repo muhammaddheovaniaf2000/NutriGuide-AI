@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1769145328348" clover="3.2.0">
+  <project timestamp="1769145328348" name="All files">
+    <metrics statements="303" coveredstatements="267" conditionals="86" coveredconditionals="61" methods="32" coveredmethods="32" elements="421" coveredelements="360" complexity="0" loc="303" ncloc="303" packages="5" files="23" classes="23"/>
+    <package name="controllers">
+      <metrics statements="137" coveredstatements="111" conditionals="46" coveredconditionals="33" methods="14" coveredmethods="14"/>
+      <file name="ai.js" path="/Users/dheovaniadityafashamuhammad/Documents/Hacktiv8/Phase 2/Week 3/NutriGuide AI/server/controllers/ai.js">
+        <metrics statements="35" coveredstatements="17" conditionals="13" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="1" type="cond" truecount="3" falsecount="4"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
+        <line num="70" count="1" type="stmt"/>
+        <line num="71" count="1" type="stmt"/>
+        <line num="77" count="1" type="stmt"/>
+        <line num="78" count="1" type="stmt"/>
+        <line num="80" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="81" count="1" type="stmt"/>
+        <line num="84" count="0" type="stmt"/>
+        <line num="90" count="0" type="stmt"/>
+        <line num="91" count="0" type="stmt"/>
+        <line num="92" count="0" type="stmt"/>
+        <line num="94" count="0" type="stmt"/>
+        <line num="99" count="1" type="stmt"/>
+        <line num="100" count="1" type="stmt"/>
+        <line num="101" count="1" type="stmt"/>
+        <line num="109" count="5" type="stmt"/>
+      </file>
+      <file name="favorites.js" path="/Users/dheovaniadityafashamuhammad/Documents/Hacktiv8/Phase 2/Week 3/NutriGuide AI/server/controllers/favorites.js">
+        <metrics statements="27" coveredstatements="26" conditionals="12" coveredconditionals="11" methods="3" coveredmethods="3"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="21" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+        <line num="43" count="2" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="50" count="3" type="stmt"/>
+        <line num="51" count="3" type="stmt"/>
+        <line num="52" count="3" type="stmt"/>
+        <line num="54" count="3" type="stmt"/>
+        <line num="58" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="59" count="2" type="stmt"/>
+        <line num="62" count="1" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="68" count="2" type="stmt"/>
+        <line num="73" count="5" type="stmt"/>
+      </file>
+      <file name="mealPlans.js" path="/Users/dheovaniadityafashamuhammad/Documents/Hacktiv8/Phase 2/Week 3/NutriGuide AI/server/controllers/mealPlans.js">
+        <metrics statements="24" coveredstatements="23" conditionals="7" coveredconditionals="7" methods="3" coveredmethods="3"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="9" count="4" type="cond" truecount="5" falsecount="0"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="44" count="3" type="stmt"/>
+        <line num="45" count="3" type="stmt"/>
+        <line num="46" count="3" type="stmt"/>
+        <line num="48" count="3" type="stmt"/>
+        <line num="50" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="51" count="2" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="57" count="2" type="stmt"/>
+        <line num="62" count="5" type="stmt"/>
+      </file>
+      <file name="recipe.js" path="/Users/dheovaniadityafashamuhammad/Documents/Hacktiv8/Phase 2/Week 3/NutriGuide AI/server/controllers/recipe.js">
+        <metrics statements="14" coveredstatements="10" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="48" count="5" type="stmt"/>
+      </file>
+      <file name="user.js" path="/Users/dheovaniadityafashamuhammad/Documents/Hacktiv8/Phase 2/Week 3/NutriGuide AI/server/controllers/user.js">
+        <metrics statements="37" coveredstatements="35" conditionals="12" coveredconditionals="10" methods="4" coveredmethods="4"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="25" count="5" type="stmt"/>
+        <line num="30" count="5" type="stmt"/>
+        <line num="31" count="5" type="stmt"/>
+        <line num="33" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="37" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="42" count="3" type="stmt"/>
+        <line num="44" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="47" count="2" type="stmt"/>
+        <line num="48" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="55" count="4" type="stmt"/>
+        <line num="56" count="4" type="stmt"/>
+        <line num="63" count="1" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="69" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="71" count="1" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="80" count="1" type="stmt"/>
+        <line num="81" count="1" type="stmt"/>
+        <line num="83" count="1" type="stmt"/>
+        <line num="84" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="86" count="1" type="stmt"/>
+        <line num="93" count="1" type="stmt"/>
+        <line num="103" count="0" type="stmt"/>
+        <line num="112" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="helpers">
+      <metrics statements="24" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <file name="bcrypt.js" path="/Users/dheovaniadityafashamuhammad/Documents/Hacktiv8/Phase 2/Week 3/NutriGuide AI/server/helpers/bcrypt.js">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="45" type="stmt"/>
+        <line num="5" count="45" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+      </file>
+      <file name="gemini.js" path="/Users/dheovaniadityafashamuhammad/Documents/Hacktiv8/Phase 2/Week 3/NutriGuide AI/server/helpers/gemini.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+      </file>
+      <file name="jwt.js" path="/Users/dheovaniadityafashamuhammad/Documents/Hacktiv8/Phase 2/Week 3/NutriGuide AI/server/helpers/jwt.js">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="39" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="46" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+      </file>
+      <file name="spoonacular.js" path="/Users/dheovaniadityafashamuhammad/Documents/Hacktiv8/Phase 2/Week 3/NutriGuide AI/server/helpers/spoonacular.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+      </file>
+      <file name="unsplash.js" path="/Users/dheovaniadityafashamuhammad/Documents/Hacktiv8/Phase 2/Week 3/NutriGuide AI/server/helpers/unsplash.js">
+        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="middlewares">
+      <metrics statements="42" coveredstatements="36" conditionals="30" coveredconditionals="21" methods="2" coveredmethods="2"/>
+      <file name="authentication.js" path="/Users/dheovaniadityafashamuhammad/Documents/Hacktiv8/Phase 2/Week 3/NutriGuide AI/server/middlewares/authentication.js">
+        <metrics statements="19" coveredstatements="18" conditionals="8" coveredconditionals="7" methods="1" coveredmethods="1"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="56" type="stmt"/>
+        <line num="6" count="56" type="stmt"/>
+        <line num="8" count="56" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="10" type="stmt"/>
+        <line num="12" count="46" type="stmt"/>
+        <line num="13" count="46" type="stmt"/>
+        <line num="14" count="46" type="stmt"/>
+        <line num="16" count="46" type="cond" truecount="3" falsecount="1"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="20" count="46" type="stmt"/>
+        <line num="22" count="45" type="stmt"/>
+        <line num="23" count="45" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="27" count="44" type="stmt"/>
+        <line num="33" count="44" type="stmt"/>
+        <line num="35" count="12" type="stmt"/>
+      </file>
+      <file name="errorHandler.js" path="/Users/dheovaniadityafashamuhammad/Documents/Hacktiv8/Phase 2/Week 3/NutriGuide AI/server/middlewares/errorHandler.js">
+        <metrics statements="23" coveredstatements="18" conditionals="22" coveredconditionals="14" methods="1" coveredmethods="1"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="32" type="stmt"/>
+        <line num="4" count="32" type="stmt"/>
+        <line num="5" count="32" type="stmt"/>
+        <line num="7" count="32" type="cond" truecount="4" falsecount="0"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="27" type="cond" truecount="4" falsecount="0"/>
+        <line num="12" count="14" type="stmt"/>
+        <line num="13" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="17" count="9" type="cond" truecount="1" falsecount="1"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="9" type="cond" truecount="1" falsecount="1"/>
+        <line num="21" count="9" type="stmt"/>
+        <line num="22" count="9" type="stmt"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="25" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="28" count="32" type="stmt"/>
+      </file>
+    </package>
+    <package name="models">
+      <metrics statements="44" coveredstatements="43" conditionals="10" coveredconditionals="7" methods="12" coveredmethods="12"/>
+      <file name="favorite.js" path="/Users/dheovaniadityafashamuhammad/Documents/Hacktiv8/Phase 2/Week 3/NutriGuide AI/server/models/favorite.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="34" count="5" type="stmt"/>
+      </file>
+      <file name="index.js" path="/Users/dheovaniadityafashamuhammad/Documents/Hacktiv8/Phase 2/Week 3/NutriGuide AI/server/models/index.js">
+        <metrics statements="21" coveredstatements="20" conditionals="10" coveredconditionals="7" methods="3" coveredmethods="3"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="5" type="cond" truecount="1" falsecount="1"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="13" count="5" type="cond" truecount="1" falsecount="1"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="22" count="25" type="stmt"/>
+        <line num="30" count="20" type="stmt"/>
+        <line num="31" count="20" type="stmt"/>
+        <line num="34" count="5" type="stmt"/>
+        <line num="35" count="20" type="cond" truecount="1" falsecount="1"/>
+        <line num="36" count="20" type="stmt"/>
+        <line num="40" count="5" type="stmt"/>
+        <line num="41" count="5" type="stmt"/>
+        <line num="43" count="5" type="stmt"/>
+      </file>
+      <file name="mealplan.js" path="/Users/dheovaniadityafashamuhammad/Documents/Hacktiv8/Phase 2/Week 3/NutriGuide AI/server/models/mealplan.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="39" count="5" type="stmt"/>
+      </file>
+      <file name="recipe.js" path="/Users/dheovaniadityafashamuhammad/Documents/Hacktiv8/Phase 2/Week 3/NutriGuide AI/server/models/recipe.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="42" count="5" type="stmt"/>
+      </file>
+      <file name="user.js" path="/Users/dheovaniadityafashamuhammad/Documents/Hacktiv8/Phase 2/Week 3/NutriGuide AI/server/models/user.js">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="14" count="5" type="stmt"/>
+        <line num="15" count="5" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="139" count="5" type="stmt"/>
+        <line num="140" count="45" type="stmt"/>
+        <line num="142" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="routes">
+      <metrics statements="56" coveredstatements="56" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="ai.js" path="/Users/dheovaniadityafashamuhammad/Documents/Hacktiv8/Phase 2/Week 3/NutriGuide AI/server/routes/ai.js">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="52" count="5" type="stmt"/>
+        <line num="54" count="5" type="stmt"/>
+      </file>
+      <file name="favorite.js" path="/Users/dheovaniadityafashamuhammad/Documents/Hacktiv8/Phase 2/Week 3/NutriGuide AI/server/routes/favorite.js">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+      </file>
+      <file name="index.js" path="/Users/dheovaniadityafashamuhammad/Documents/Hacktiv8/Phase 2/Week 3/NutriGuide AI/server/routes/index.js">
+        <metrics statements="20" coveredstatements="20" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="28" count="5" type="stmt"/>
+        <line num="45" count="5" type="stmt"/>
+        <line num="48" count="5" type="stmt"/>
+        <line num="52" count="5" type="stmt"/>
+        <line num="54" count="5" type="stmt"/>
+        <line num="55" count="5" type="stmt"/>
+        <line num="56" count="5" type="stmt"/>
+        <line num="57" count="5" type="stmt"/>
+        <line num="60" count="5" type="stmt"/>
+        <line num="62" count="5" type="stmt"/>
+      </file>
+      <file name="mealPlan.js" path="/Users/dheovaniadityafashamuhammad/Documents/Hacktiv8/Phase 2/Week 3/NutriGuide AI/server/routes/mealPlan.js">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="28" count="5" type="stmt"/>
+        <line num="42" count="5" type="stmt"/>
+        <line num="61" count="5" type="stmt"/>
+        <line num="63" count="5" type="stmt"/>
+      </file>
+      <file name="recipe.js" path="/Users/dheovaniadityafashamuhammad/Documents/Hacktiv8/Phase 2/Week 3/NutriGuide AI/server/routes/recipe.js">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+      </file>
+      <file name="user.js" path="/Users/dheovaniadityafashamuhammad/Documents/Hacktiv8/Phase 2/Week 3/NutriGuide AI/server/routes/user.js">
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

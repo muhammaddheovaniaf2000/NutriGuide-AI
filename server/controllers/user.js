@@ -5,21 +5,23 @@ const { signToken } = require('../helpers/jwt');
 class UserController {
     static async register(req, res, next) {
         try {
-            const { username, email, password, weight, height, age, gender, goal } = req.body;
+            const { username, email, password } = req.body;
 
-            const newUser = await User.create({ username, email, password, weight, height, age, gender, goal })
+            const newUser = await User.create({ 
+                username, 
+                email, 
+                password 
+            });
 
             res.status(201).json({ 
                 message: "User created successfully",
                 user: {
                     id: newUser.id,
                     username: newUser.username,
-                    email: newUser.email,
-                    goal: newUser.goal // Mengirim goal balik untuk redirect di react
+                    email: newUser.email
                 }
             });
         } catch (error) {
-            console.log(error);
             next(error);
         }
     }
@@ -55,6 +57,54 @@ class UserController {
             
         }
     }
+
+
+    static async showProfile(req, res, next) {
+        try {
+          // req.user.id didapat dari middleware authentication
+          const user = await User.findByPk(req.user.id, {
+            attributes: { exclude: ['password'] }
+          });
+    
+          if (!user) throw { name: 'NotFound', message: 'User not found' };
+    
+          res.status(200).json(user);
+        } catch (error) {
+          next(error);
+        }
+      }
+
+
+
+      static async updateProfile(req, res, next) {
+        try {
+            const { username, email, gender, age } = req.body;
+    
+            const user = await User.findByPk(req.user.id);
+            if (!user) throw { name: 'NotFound', message: 'User not found' };
+    
+            await user.update({ 
+                username, 
+                email, 
+                gender, 
+                age 
+            });
+    
+            res.status(200).json({ 
+                message: "Profile updated successfully",
+                user: {
+                    username: user.username,
+                    email: user.email,
+                    gender: user.gender,
+                    age: user.age
+                }
+            });
+        } catch (error) {
+            next(error);
+        }
+    }
+
+
 }
 
   

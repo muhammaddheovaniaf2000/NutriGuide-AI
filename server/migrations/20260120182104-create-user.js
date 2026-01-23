@@ -11,36 +11,36 @@ module.exports = {
       },
       username: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
       },
       email: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
         unique: true 
       },
       password: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
       },
       weight: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: true
       },
       height: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: true
       },
       age: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: true
       },
       gender: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
       },
       goal: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
       },
       createdAt: {
         allowNull: false,

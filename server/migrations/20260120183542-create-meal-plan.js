@@ -23,10 +23,6 @@ module.exports = {
       RecipeId: {
         type: Sequelize.STRING,
         allowNull: false,
-        references: {
-          model: 'Recipes',
-          key: 'id'
-        },
       },
       date: {
         type: Sequelize.DATEONLY,

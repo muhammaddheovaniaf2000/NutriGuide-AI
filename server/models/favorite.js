@@ -11,12 +11,22 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Favorite.belongsTo(models.User, { foreignKey: 'UserId' });  
-      Favorite.belongsTo(models.Recipe, { foreignKey: 'RecipeId' });
+      // RecipeId is a string reference to external API, not a DB relationship
     }
   }
   Favorite.init({
-    UserId: DataTypes.INTEGER,
-    RecipeId: DataTypes.STRING
+    UserId: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    RecipeId: {
+      type: DataTypes.STRING, 
+      allowNull: false,
+      references: null  // Explicitly no foreign key
+    },
+    title: DataTypes.STRING,   
+    image: DataTypes.STRING,   
+    description: DataTypes.TEXT
   }, {
     sequelize,
     modelName: 'Favorite',

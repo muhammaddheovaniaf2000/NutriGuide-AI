@@ -1,6 +1,5 @@
-const { raw } = require("express");
 const { verifyToken } = require("../helpers/jwt");
-
+const { User } = require("../models");
 
 module.exports = async function authMiddleware(req, res, next) {
     try {

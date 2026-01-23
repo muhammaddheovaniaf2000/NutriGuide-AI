@@ -22,12 +22,15 @@ module.exports = {
       RecipeId: {
         type: Sequelize.STRING,
         allowNull: false,
-        references: {
-          model: 'Recipes',
-          key: 'id'
-        },
-        onDelete: 'CASCADE',
-        onUpdate: 'CASCADE'
+      },
+      title: {
+        type: Sequelize.STRING
+      },
+      image: {
+        type: Sequelize.STRING
+      },
+      description: {
+        type: Sequelize.TEXT
       },
       createdAt: {
         allowNull: false,

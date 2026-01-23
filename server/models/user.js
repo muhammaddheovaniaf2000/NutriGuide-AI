@@ -12,7 +12,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       User.hasMany(models.MealPlan, { foreignKey: 'UserId' });
-      User.belongsToMany(models.Recipe, { through: models.Favorite, foreignKey: 'UserId', otherKey: 'RecipeId' });
+      User.hasMany(models.Favorite, { foreignKey: 'UserId' });
+      // Recipe model is external API reference, not DB relationship
+      // User.belongsToMany(models.Recipe, { through: models.Favorite, foreignKey: 'UserId', otherKey: 'RecipeId' });
     }
   }
   User.init({
@@ -61,12 +63,9 @@ module.exports = (sequelize, DataTypes) => {
     },
     weight: {
       type:DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       validate: {
         notEmpty: {
-          msg: "Weight required"
-        },
-        notNull: {
           msg: "Weight required"
         },
         isInt: {
@@ -80,12 +79,9 @@ module.exports = (sequelize, DataTypes) => {
     },
     height: {
       type:DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       validate: {
         notEmpty: {
-          msg: "Height required"
-        },
-        notNull: {
           msg: "Height required"
         },
         isInt: {
@@ -99,12 +95,9 @@ module.exports = (sequelize, DataTypes) => {
     },
     age: {
       type:DataTypes.INTEGER,
-      allowNull: false, 
+      allowNull: true, 
       validate: {
         notEmpty: {
-          msg: "Age required"
-        },
-        notNull: {
           msg: "Age required"
         },
         min: {
@@ -115,12 +108,9 @@ module.exports = (sequelize, DataTypes) => {
     },
     gender: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       validate: {
         notEmpty: { 
-          msg: "Gender required" 
-        },
-        notNull: { 
           msg: "Gender required" 
         },
         isIn: {
@@ -131,10 +121,11 @@ module.exports = (sequelize, DataTypes) => {
     },
     goal: {
       type: DataTypes.STRING, // UBAH DARI INTEGER KE STRING
-      allowNull: false,
+      allowNull: true,
       validate: {
-        notEmpty: { msg: "Goal required" },
-        notNull: { msg: "Goal required" },
+        notEmpty: { 
+          msg: "Goal required" 
+        },
         isIn: {
           args: [['Weight Loss', 'Weight Gain', 'Maintain Weight']],
           msg: "Goal must be Weight Loss, Weight Gain, or Maintain Weight"

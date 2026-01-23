@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       MealPlan.belongsTo(models.User, { foreignKey: 'UserId' });
-      MealPlan.belongsTo(models.Recipe, { foreignKey: 'RecipeId' });  
+      // RecipeId is a string reference to external API, not a DB relationship
     }
   }
   MealPlan.init({
@@ -21,7 +21,8 @@ module.exports = (sequelize, DataTypes) => {
     },
     RecipeId: {
       type:DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      references: null  // Explicitly no foreign key
     },
     date: {
       type:DataTypes.DATEONLY,

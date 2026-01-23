@@ -9,8 +9,8 @@ router.post('/register', UserController.register)
 router.post('/login', UserController.login)
 
 router.use(authentication)
-// router.get('/profile', UserController.showProfile)
-// router.put('/profile', UserController.updateProfile)
+router.get('/profiles', UserController.showProfile)
+router.put('/profiles', UserController.updateProfile)
 
 
 module.exports = router;

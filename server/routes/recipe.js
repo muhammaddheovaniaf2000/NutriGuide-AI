@@ -6,8 +6,12 @@ const router = express.Router()
 
 //? ENDPOINTS INI MENJADI JEMBATAN KE API 
 router.get('/', RecipeController.searchRecipes)
-// router.get('/:id', RecipeController.detailRecipe)
+router.get('/:id', RecipeController.detailRecipe)
 
 
 
 module.exports = router;
+
+
+
+
